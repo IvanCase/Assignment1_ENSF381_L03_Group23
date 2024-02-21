@@ -6,13 +6,14 @@ Author ( s ) : Mark Jimenez, Ron Ivan Ibe
 Submission : Jan 31, 2024
 Description : A simple HTML file .
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
--->
+-- >
 
 
 <!DOCTYPE html>
 <html>
 
 <head>
+    
     <meta name = "keywords" content = "HTML">
     <meta name = "desription" content = "Login Page">
     <meta name = "author" content = "Mark Jimenez, Ron Ivan Ibe">
@@ -41,7 +42,7 @@ Description : A simple HTML file .
 
     </header>
 
-<div>
+<div>  
    
     <a href = "index.html"> <b>Back to Home</b> </a>
     <br>
@@ -60,21 +61,69 @@ Description : A simple HTML file .
 <main>
 
     <Style>
-        input[type= "text"]
-        {
-            Border-color: rgb(11, 60, 255);
+       
+        .flex-container{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            background-color: #ddd;
+            padding : 20px;
+            margin: 20px;
+            border-radius: 10px;
         }
+        
+        
+        .fields {
+            display: block;
+            margin: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            
+            }
+        button{
+            background-color: #4CAF50;
+            padding:10px;
+            border-radius: 5px;
+            margin: 10;
+            opacity:0.5;
+            border: none; 
+            
+        }
+        button:hover{
+
+            opacity: 1;
+        }
+        
+        .signup{
+
+
+            color:  #007bff;
+        }
+
     </style>
-<label for="Username">Username:</label>
-    <input type="text" id=" Username" name = "Username">
+
+
+<div class="flex-container">
+
+
+    <label for="username">Username:</label>
+    <input type="text" id=" Username" name = "Username" class = "fields" required placeholder="Enter your username">
 <br>
 
 <label for="password">Password:</label>
-    <input type = "text" id="password" name="password">
+ 
+    <input type = "text" id="password" name="password" class = "fields"  required placeholder="Enter your Password">
 <br>
 
-    <input type= "submit" value = "Login">
+<button type="submit" class="login-btn">Login</button>
     <br>
+    <p>
+        Don't have an account? <a class = "signup" href="signup.html">Sign up here</a>
+    </p>
+
+</div>
+
 
 </main>
 
