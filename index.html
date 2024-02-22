@@ -22,82 +22,118 @@ Description : A simple HTML file .
 <body>
 
     <header>
-
-        <p>
-            
-            <img src="images/pal.jpg" width="100" height="100"/>
-            <h1>
-                <span>Palwurld Black Market</span>
-   
-                </h1>
-        
-        </p>
-        <hr>
-
+        <img src="images/pal.jpg" width="100" height="100"/>
+        <div class="company-name">
+        <h1>Palwurld Black Market</h1>
+        </div>
     </header>
     
-    <div>
-
+    <div class="navigation">
+        <a href = "index.html"> <b>Go to Home</b> </a>
         <a href = "products.html"> <b>Go to Products</b> </a>
-        <br>
         <a href = "contact.html"> <b>Go to Contacts</b> </a>
-        <br>
         <a href = "login.html"> <b>Go to Login</b> </a>
-
-        <hr>
-
     </div>
 
-
 <main>
+
+    <style>
+        .about-us {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            background-color: #ddd; 
+            padding: 20px;
+            margin: 20px; 
+        }
+
+        .about-us h2 {
+            margin-bottom: 20px; 
+        }
+
+        .shop-now {
+            display: inline-block; 
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 10px; 
+            border-radius: 5px; 
+            margin: 20px; 
+            text-decoration: none;
+        }
+
+        .customer-reviews {
+            display: flex;
+            flex-direction: column; 
+            background-color: #ddd; 
+            padding: 20px;
+            margin: 20px; 
+        }
+        
+        .customer-reviews h2 {
+            margin-bottom: 20px; 
+        }
+        
+        .review {
+            margin-bottom: 20px;
+        }
+        
+        .rating {
+            display: flex; 
+        }
+        
+        .rating img {
+            width: 20px; 
+            margin-right: 4px; /
+        }
+        
+    </style>
+
 <!-- About Us Section -->
+
     <section class="about-us">
-        <b><u>About Us</u></b>
-        <br>
-        <b>Our vision in this company is to sell as many pals for the cheapest price available without losing money and still making a lot of money.</b>
-        <hr>
+        <h2>About Us</h2>
+        <p>Our vision in this company is to sell as many pals for the cheapest price available without losing money and still making a lot of money.</p>
     </section>
 
-    <section class="shop-now">
-        <b><u>SHOP NOW!</u></b>
-            <a href="products.html">
-            <br>
-            <img src="images/productlink.png" width="50" height="50"/>
-            </a>
-        <hr>
+    <section>
+            <a href="products.html" class="shop-now">Shop Now</a>
     </section>
+
 <!-- Customer Reviews/Testimonials Section -->
-    <section class="customer-reviews">
-        <p><b><u>Customer Reviews</u></b>
-        <br>
-        <b>Elon Musk:<br></b> "As the proud owner of X, these pals make a great use to the team."
-        <br>
-        <b>John Wick:<br></b> "It gets lonely when the dog isn't around, these pals fill in the gaps to my loneliness."</p>
-
-        <hr>
-
-    </section>
+    
+<section class="customer-reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review">
+        <p>Elon Musk: "As the proud owner of X, these pals make a great use to the team."</p>
+        <div class="rating">
+            <img src="images/star.png" alt="Star" />
+            <img src="images/star.png" alt="Star" />
+            <img src="images/star.png" alt="Star" />
+            <img src="images/star.png" alt="Star" />
+            <img src="images/star.png" alt="Star" />
+        </div>
+    </div>
+    <div class="review">
+        <p>John Wick: "It gets lonely when the dog isn't around, these pals fill in the gaps to my loneliness."</p>
+        <div class="rating">
+            <img src="images/star.png" alt="Star" />
+            <img src="images/star.png" alt="Star" />
+            <img src="images/star.png" alt="Star" />
+            <img src="images/star.png" alt="Star" />
+            <img src="images/star.png" alt="Star" />
+        </div>
+    </div>
+</section>
 
 </main>
 
 
     <footer>
-<!-- Copyright notice goes here -->
-        <p>Creator: Mark Jimenez, Ivan Ibe
-            <br>
-            <a href="https://store.steampowered.com/app/945360/Among_Us/"> Sponsor for this page:  <b>CIA</b></a>
-            <br>
-            <a href="https://gfuel.com/en-ca"> Sponsor for this page: <b>GFuel</b></a>
-
-                <p> © 2024 Palwurld. All rights reserved.
-
-                The content, images, and materials on this website are protected by copyright law. Any unauthorized use, reproduction, or distribution of the content on this website is strictly prohibited.
-        
-                You may not, except with our express written permission, distribute or commercially exploit the content. Nor may you transmit it or store it in any other website or other form of electronic retrieval system.
-        
-                For permissions or inquiries, please contact <b>palwurldofficial@gmail.com</b>.</p>
-                <hr>
-        </p>
+        <!-- Copyright notice goes here -->
+        <p> © 2024 Palwurld. All rights reserved.</p>
+        <a href="https://store.steampowered.com/app/945360/Among_Us/"> Sponsor for this page:  <b>CIA</b></a>
+        <a href="https://gfuel.com/en-ca"> Sponsor for this page: <b>GFuel</b></a>
+        <p>Creators: Mark Jimenez, Ron Ivan Ibe</p>
     </footer>
 
 </body>
