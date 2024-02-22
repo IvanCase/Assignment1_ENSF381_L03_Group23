@@ -1,9 +1,9 @@
 <! - -
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 Name : products.html
-Assignment : Assignment 1
+Assignment : Assignment 2
 Author ( s ) : Mark Jimenez, Ron Ivan Ibe
-Submission : Jan 31, 2024
+Submission : Feb 22, 2024
 Description : A simple HTML file .
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 -- >
@@ -70,35 +70,48 @@ Description : A simple HTML file .
             border-radius: 5px;
         }
        
+        tr{
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
       
         td{
 
             padding: 10px;
             margin: 20px;
             border-radius: 10px;
-            align-items: center;
+            
             background-color: #FFF;
            
-            width:40%;
+           
             text-align: center;
             display:inline-block;
             justify-content: center;
             align-items: center;
-            
+            width:40%;
         }
 
         @media screen and (max-width: 769px) {	
             th{
                 display: none;
-                width: 100%;
+                
                 
             }	    
 			td{ 
                 
 				display: block;
- 
+                width: 90%;
             
+            }
+            tr{
+
+                display: inline-block;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
             }
 
 			
@@ -113,6 +126,7 @@ Description : A simple HTML file .
     </style>
     <section class="product-list">
     <table>
+        
         <!-- This is the first row of the products-->
        
         <tr>
@@ -189,6 +203,7 @@ Description : A simple HTML file .
     <!-- Copyright notice goes here -->
     <p> © 2024 Palwurld. All rights reserved.</p>
     <a href="https://store.steampowered.com/app/945360/Among_Us/"> Sponsor for this page:  <b>CIA</b></a>
+    <br>
     <a href="https://gfuel.com/en-ca"> Sponsor for this page: <b>GFuel</b></a>
     <p>Creators: Mark Jimenez, Ron Ivan Ibe</p>
 </footer>

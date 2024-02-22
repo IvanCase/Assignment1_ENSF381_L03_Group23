@@ -1,9 +1,9 @@
 <! - -
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 Name : login.html
-Assignment : Assignment 1
+Assignment : Assignment 2
 Author ( s ) : Mark Jimenez, Ron Ivan Ibe
-Submission : Jan 31, 2024
+Submission : Feb 22, 2024
 Description : A simple HTML file .
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 -- >
@@ -40,8 +40,16 @@ Description : A simple HTML file .
 <main>
 
     <Style>
-       
+        
+
+
+        .label-tags{
+            position: relative;
+            right:40px
+        }
+
         .flex-container{
+
             display: flex;
             flex-direction:column;
             align-items: center;
@@ -51,7 +59,13 @@ Description : A simple HTML file .
             border-radius: 10px;
         }
         
-        
+        .second{
+            
+            display: flex;
+            position: relative;
+            align-items: center;
+            left:25px
+        }
         .fields {
             display: block;
             margin: 10px;
@@ -60,6 +74,7 @@ Description : A simple HTML file .
             border-radius: 5px;
             
             }
+        
         button{
             background-color: #4CAF50;
             padding:10px;
@@ -69,37 +84,55 @@ Description : A simple HTML file .
             border: none; 
             
         }
+
         button:hover{
 
             opacity: 1;
         }
         
         .signup{
-
-
             color:  #007bff;
         }
-
+        
     </style>
 
 
 <div class="flex-container">
 
+    <div class = "tags">
+        <label for="username" class="label-tags" >Username:</label>
+    </div>
+   
+    <div class="first">
 
-    <label for="username">Username:</label>
-    <input type="text" id=" Username" name = "Username" class = "fields" required placeholder="Enter your username">
-<br>
+        
+        <input type="text" id=" Username" name = "Username" class="fields" required placeholder="Enter your username" >
 
-<label for="password">Password:</label>
+
+    </div>
+    
+    <div class = "tags">
+        <label for="password" class = "label-tags">Password:</label>
+    </div>
+
+
+
+    <div class = "second">
+        <input type = "text" id="password" name="password"  class = "fields"  required placeholder="Enter your Password">
+        <button type="submit"class= "pass-login-align" >Login</button>
+    
+    </div>
+
+    <div class = "tags">
+        <p>
+            Don't have an account? <a class = "signup" href="signup.html">Sign up here</a>
+        </p>
+    </div>
+
+    
+    
  
-    <input type = "text" id="password" name="password" class = "fields"  required placeholder="Enter your Password">
-<br>
-
-<button type="submit" class="login-btn">Login</button>
-    <br>
-    <p>
-        Don't have an account? <a class = "signup" href="signup.html">Sign up here</a>
-    </p>
+   
 
 </div>
 
@@ -110,6 +143,7 @@ Description : A simple HTML file .
     <!-- Copyright notice goes here -->
     <p> © 2024 Palwurld. All rights reserved.</p>
     <a href="https://store.steampowered.com/app/945360/Among_Us/"> Sponsor for this page:  <b>CIA</b></a>
+    <br>
     <a href="https://gfuel.com/en-ca"> Sponsor for this page: <b>GFuel</b></a>
     <p>Creators: Mark Jimenez, Ron Ivan Ibe</p>
 </footer>
