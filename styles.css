@@ -57,3 +57,156 @@ footer a:hover {
     color: #007BFF;
 }
 
+
+
+/* login.html */
+
+  
+
+
+.label-tags{
+    position: relative;
+    right:40px
+}
+
+.flex-container{
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: #ddd;
+    padding : 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.second{
+    
+    display: flex;
+    position: relative;
+    align-items: center;
+    left:25px
+}
+.fields {
+    display: block;
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    
+    }
+
+.login-btn{
+    background-color: #4CAF50;
+    padding:10px;
+    border-radius: 5px;
+    margin: 10;
+    opacity:0.5;
+    border: none; 
+    
+}
+
+.login-btn:hover{
+
+    opacity: 1;
+}
+
+.signup{
+    color:  #007bff;
+}
+
+
+
+/*product.html */
+
+.products-main{
+
+    background-color: #DDD;
+    border-radius: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.product-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    border-radius: 10px;
+
+    text-align: center;
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+   
+}
+
+.product-table{
+    background-color: #DDD;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    align-items: center;
+    width: 100%;
+
+
+}
+.buy-btn{
+
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px ;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-row{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.product-td{
+
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    
+    background-color: #FFF;
+   
+   
+    text-align: center;
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    width:40%;
+}
+
+@media screen and (max-width: 769px) {	
+   
+    .product-td{ 
+        
+        display: block;
+        width: 90%;
+    
+    }
+    .product-row{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    
+}
+.price{
+    margin: 10px;
+    color: #3265ff;
+}
