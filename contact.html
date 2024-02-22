@@ -35,31 +35,69 @@ Description : A simple HTML file.
         <a href = "login.html"> <b>Go to Login</b> </a>
     </div>
     
-<main>
-        <p><b><u>This is our contact page</u></b>
-    <br>
-        <b>Contact Info:</b>
-    <br>
-        <b style="color: rgb(255, 0, 0)">randomperson@gmail.com</b> 
-    <br>
-        <b>Phone Number: 587-367-6721</b>
-    <br>
-        <b style="color: rgb(255, 0, 0)">heshim@gmail.com</b>
-    <br>
-        <b>Phone Number: 403-231-4812</b>
-    <br>
-        <b><u>Our social media links</u></b>
-    <br>
-    
-<a href="https://www.Twitter.com">
-    <img src="images/TwitterLogo.png"/>
-   </a>
-   <a href="https://www.Facebook.com">
-    <img src="images/facebooklogo.png"/>
-   </a></p>
-<hr>
+    <main class="contact-info">
+        
+        <style>
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #ddd;
+                padding: 20px;
+                margin: 20px;
+                border-radius: 10px;
+                
+            }
 
-</main>
+            .contact-method {
+                background-color: #ddd;
+                border-radius: 10px;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 20px; 
+            }
+            
+            .social-media {
+                display: flex;
+                justify-content: start;
+                gap: 10px;
+            }
+            
+            .social-link {
+                text-decoration: none;
+            }
+            
+            .social-link:hover {
+                color: #007BFF; 
+            }
+       
+        </style>
+
+        <h2>Reach Out to Us</h2>
+        <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to contact us through any of the channels below:</p>
+        <br>
+        <div class="contact-method">
+            <p><b>Email:</b> <a href="mailto:SideCharacterWho?@gmail.com" class="email">SideCharacterWho?@gmail.com</a>
+            <img src="images/Yuta.webp" width="50" height="50"/></p>
+            <p><b>Phone Number:</b> 587-367-6721</p>
+        </div>
+        <div class="contact-method">
+            <p><b>Email:</b> <a href="mailto:NahI'dWin@gmail.com" class="email">NahI'dWin@gmail.com</a>
+            <img src="images/gojo.png" width="70" height="50"/></p>
+            <p><b>Phone Number:</b> 403-231-4812</p>
+        </div>
+    
+        <div class="contact-method social-media">
+            <p><b>Social Media:</b></p>
+            <a href="https://www.Twitter.com" class="social-link">Twitter</a>
+            <img src="images/TwitterLogo.png" width="30" height="30"/>
+            <a href="https://www.Facebook.com" class="social-link">Facebook</a>
+            <img src="images/facebooklogo.png" width="30" height="30"/>
+        </div>
+    </main>
 
 <footer>
     <!-- Copyright notice goes here -->
