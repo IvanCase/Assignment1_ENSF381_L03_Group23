@@ -1,3 +1,5 @@
+/* index.html */
+
 * {
     margin: 0;
     padding: 0;
@@ -57,12 +59,105 @@ footer a:hover {
     color: #007BFF;
 }
 
+.about-us {
+    display: flex;
+    flex-direction: column; 
+    align-items: left;
+    background-color: #ddd; 
+    padding: 20px;
+    margin: 20px; 
+}
+
+.about-us h2 {
+    margin-bottom: 20px; 
+}
+
+.shop-now {
+    display: inline-block; 
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px; 
+    border-radius: 5px; 
+    margin: 20px; 
+    text-decoration: none;
+}
+
+.customer-reviews {
+    display: flex;
+    flex-direction: column; 
+    background-color: #ddd; 
+    padding: 20px;
+    margin: 20px; 
+}
+
+.customer-reviews h2 {
+    margin-bottom: 20px; 
+}
+
+.review {
+    margin-bottom: 20px;
+}
+
+.rating {
+    display: flex; 
+}
+
+.rating img {
+    width: 20px; 
+    margin-right: 4px; /
+}
+
+
+
+/* contact.html */
+/* contact.html */
+/* contact.html */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-method {
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px; 
+}
+
+.social-media {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.social-link {
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #007BFF; 
+}
 
 
 /* login.html */
-
+/* login.html */
+/* login.html */
   
-
 
 .label-tags{
     position: relative;
@@ -117,6 +212,8 @@ footer a:hover {
 
 
 
+/*product.html */
+/*product.html */
 /*product.html */
 
 .products-main{
