@@ -66,6 +66,16 @@ Description : A simple HTML file .
             opacity: 1.0;
         }
 
+        .error{
+            display: flex;
+            border : 2px solid #f9f9f9;
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin: 20px;
+
+        }
+  
+
     </style>
 </head>
 <body>
@@ -74,6 +84,7 @@ Description : A simple HTML file .
         <div class="company-name">
         <h1>Palwurld Black Market</h1>
         </div>
+        <script defer src = "script.js"> </script>
     </header>
 
     <div class="navigation">
@@ -109,6 +120,14 @@ Description : A simple HTML file .
                 <button type="submit" class="signup-button">Signup</button>
             </form>
         </section>
+
+        <div class = "error" id="error">
+
+            <p id="error-msg"> 
+
+
+            </p>
+        </div>    
     </main>
 
     <footer>
@@ -120,8 +139,6 @@ Description : A simple HTML file .
         <p>Creators: Mark Jimenez, Ron Ivan Ibe</p>
     </footer>
 
-    <script>
-    
-    </script>
+
 </body>
 </html>
