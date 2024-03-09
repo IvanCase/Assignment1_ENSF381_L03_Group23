@@ -1,0 +1,127 @@
+
+<! - -
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+Name : login.html
+Assignment : Assignment 2
+Author ( s ) : Mark Jimenez, Ron Ivan Ibe
+Submission : Feb 22, 2024
+Description : A simple HTML file .
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+-- >
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <head>
+    
+        <meta name = "keywords" content = "HTML">
+        <meta name = "description" content = "Login Page">
+        <meta name = "author" content = "Mark Jimenez, Ron Ivan Ibe">
+        <title>Palwurld Login</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    
+    <style>
+        /* CSS styling for the signup form section */
+        .signup-form-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ddd;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        /* CSS styling for the form fields */
+        .form-field label{
+            display: block;
+            margin: 10px;
+        }
+
+        .form-field input {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        /* CSS styling for the signup button */
+        .signup-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            opacity: .5
+        }
+
+        .signup-button:hover {
+            background-color: #45A049;
+            opacity: 1.0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/pal.jpg" width="100" height="100"/>
+        <div class="company-name">
+        <h1>Palwurld Black Market</h1>
+        </div>
+    </header>
+
+    <div class="navigation">
+        <a href = "index.html"> <b>Go to Home</b> </a>
+        <a href = "products.html"> <b>Go to Products</b> </a>
+        <a href = "contact.html"> <b>Go to Contacts</b> </a>
+        <a href = "login.html"> <b>Go to Login</b> </a>
+    </div>
+
+    <main>
+        <section class="signup-form-section">
+            <form id="signup-form">
+            
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    
+
+            
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+
+                <button type="submit" class="signup-button">Signup</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Copyright notice goes here -->
+        <p> © 2024 Palwurld. All rights reserved.</p>
+        <a href="https://store.steampowered.com/app/945360/Among_Us/"> Sponsor for this page:  <b>CIA</b></a>
+        <br>
+        <a href="https://gfuel.com/en-ca"> Sponsor for this page: <b>GFuel</b></a>
+        <p>Creators: Mark Jimenez, Ron Ivan Ibe</p>
+    </footer>
+
+    <script>
+    
+    </script>
+</body>
+</html>
