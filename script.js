@@ -72,6 +72,12 @@ document.getElementById('signup-form').addEventListener('submit', (error) => {
     if (!email.value.includes('@') || !email.value.includes('.')) {
         messages.push('Email must contain an "@" symbol followed by a domain name i.e(.com, .net, .io)');
     }
+    const errorDiv = document.getElementById('error');
+    errorDiv.style.border = "2px solid #f9f9f9";
+    errorDiv.style.padding = "10px";
+    errorDiv.style.margin = "20px";
+    
+
 
     if (messages.length > 0) {
         error.preventDefault();
