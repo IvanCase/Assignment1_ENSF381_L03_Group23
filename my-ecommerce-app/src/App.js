@@ -1,12 +1,17 @@
 import React from 'react';
-import ProductPage from './components/ProductPage.js'; 
+import Productpage from './components/Productpage.js'; 
 import './App.css';
+import { CartContext, CartContextProvider } from './components/cart.js';
 
 
 function App() {
   return (
     <div className="App">
-      <ProductPage />
+      <CartContextProvider>
+          <Productpage />
+
+          
+      </CartContextProvider>
     </div>
   );
 }
