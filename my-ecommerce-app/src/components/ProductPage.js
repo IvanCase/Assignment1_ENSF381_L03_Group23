@@ -1,53 +1,56 @@
-import React, { useState } from 'react';
-import { useContext } from 'react';
-import products from '../data/product.js';
-import { CartContext } from "../components/cart.js";
+import React, { useState, useEffect } from 'react';
+import ProductList from '../components/ProductList.js';
+import Cart from '../components/Cart.js';
+import productsData from '../data/product.js';
 
-const Productpage = (props) => {
-    const { AddToCart, cartItems, RemoveFromCart } = useContext(CartContext);
-    const [hoveredProductId, setHoveredProductId] = useState(null);
+function Productpage() {
+   
+    const [cartItems, setCartItems] = useState([]);
+    // Save cart items to local storage
+    React.useEffect(() => {
+        const data = localStorage.getItem('cartItems');
+        if (data) {
+            setCartItems(JSON.parse(data));
+        }
+    }, []);
+
+    React.useEffect(() => {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
+
+
+
+    const addToCart = (product) => {
+        const existingItemIndex = cartItems.findIndex(item => item.id === product.id);
+        if (existingItemIndex !== -1) {
+            const updatedCartItems = [...cartItems];
+            updatedCartItems[existingItemIndex].quantity += 1;
+            setCartItems(updatedCartItems);
+        } else {
+            setCartItems([...cartItems, { ...product, quantity: 1 }]);
+        }
+    };
+
+    const removeFromCart = (product) => {
+        const updatedCartItems = cartItems.map(item =>
+            item.id === product.id ? { ...item, quantity: item.quantity - 1 } : item
+        );
+        setCartItems(updatedCartItems.filter(item => item.quantity > 0));
+    };
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
-            <div className="ProductItem" style={{ alignItems: 'flex-start' }}>
-                {products.map((product) => (
-                    <div key={product.id}>
-                        <img src={product.image} alt={product.name} style={{ width: '150px', height: '150px' }} />
-                        <p
-                            onMouseEnter={() => setHoveredProductId(product.id)}
-                            onMouseLeave={() => setHoveredProductId(null)}
-                        >
-                            {product.name}
-                        </p>
-                        {hoveredProductId === product.id && <p>{product.description}</p>}
-                        <p>Price: ${product.price}</p>
-                        <button className="addToCartBtn" onClick={() => AddToCart(product.id)}>Add to Cart</button>
-                    </div>
-                ))}
-            </div>
-            <div style={{ flex: 1 }}>
-                <h1><b>Shopping Cart</b></h1>
-                <div>
-                    {products.map((product) => {
-                        if (cartItems[product.id] !== 0) {
-                            return (
-                                <div key={product.id}>
-                                    <img src={product.image} alt={product.name} style={{ width: '50px', height: '50px' }} />
-                                    <div>
-                                        <h3>{product.name}</h3>
-                                        <p>Price: ${product.price}</p>
-                                        <p>Quantity: {cartItems[product.id]}</p>
-                                        <button className="addToCartBtn" onClick={() => RemoveFromCart(product.id)}>Remove</button>
-                                    </div>
-                                </div>
-                            );
-                        }
-                    })}
-                </div>
-                <p>Total (in cart): ${products.reduce((acc, product) => acc + cartItems[product.id] * product.price, 0).toFixed(2)}</p>
-            </div>
+        <div className="product-page">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><ProductList products={productsData} addToCart={addToCart} /></td>
+                        <td style={{ verticalAlign: 'top' }}><Cart cartItems={cartItems} removeFromCart={removeFromCart} /></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     );
-};
+
+}
 
 export default Productpage;
