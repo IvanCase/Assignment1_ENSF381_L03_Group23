@@ -1,34 +1,25 @@
-import React, { createContext, useState } from 'react';
-import product from '../data/product.js';
-export const CartContext = createContext(null);
+import React from 'react';
+import CartItem from '../components/CartItem.js';
 
+function Cart({ cartItems, removeFromCart }) {
 
-const getDefaultCart = () => {
-    let cart = {}
-    for (let i = 1; i < product.length + 1 ; i++) {
-        cart[i] = 0;
-    }
-    return cart;
+    const totalPrice = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
+
+    return (
+        <div className="cart">
+            <h1><b>Shopping Cart</b></h1>
+
+            <div>
+            
+                {cartItems.map((item, index) => (
+                    <CartItem key={index} item={item} removeFromCart={removeFromCart} />
+                ))}
+
+                <h3><b>Total (in cart): ${totalPrice}</b></h3>
+
+            </div>
+        </div>
+    );
 }
 
-
-export const CartContextProvider = (props) =>{
-    const [cartItems, setCartItems] = useState(getDefaultCart());
-
-
-
-    const AddToCart = (itemID) => {
-        setCartItems((prev) => {
-            return {...prev, [itemID]: prev[itemID] + 1};
-        }); 
-    }
-    const RemoveFromCart = (itemID) => {
-        setCartItems((prev) => {
-            return {...prev, [itemID]: prev[itemID] - 1};
-        });
-    }
-
-    const contextValue = {cartItems, AddToCart, RemoveFromCart};
-    console.log(contextValue);
-    return <CartContext.Provider value={contextValue}>{props.children}</CartContext.Provider>
-};
+export default Cart;
