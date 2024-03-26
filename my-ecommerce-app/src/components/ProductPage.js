@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import ProductList from '../components/ProductList.js';
-import Cart from '../components/Cart.js';
-import productsData from '../data/product.js';
 
-function Productpage() {
-   
-    const [cartItems, setCartItems] = useState([]);
+import React, { useState, useEffect } from 'react';
+import productsData from '../data/product.js';
+import { CartContext } from "../components/cart.js";
+import Cart from '../components/Cart.js';
+import ProductList from '../components/ProductList.js';
+import Header from './Header';
+import Footer from './Footer';
+
+const Productpage = () => {
 
 
     // Save cart items to local storage
@@ -45,15 +47,18 @@ function Productpage() {
     
     return (
         <div className="product-page">
+           <Header />
             <table>
-                <tbody>
+                
                     <tr>
                         <td><ProductList products={productsData} addToCart={addToCart} /></td>
                         <td style={{ verticalAlign: 'top' }}><Cart cartItems={cartItems} removeFromCart={removeFromCart} /></td>
                     </tr>
-                </tbody>
+                
             </table>
-        </div>
+          <Footer />
+        <div>
+           
     );
 
 }
