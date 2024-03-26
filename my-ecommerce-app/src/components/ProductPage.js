@@ -1,15 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import productsData from '../data/product.js';
-import { CartContext } from "../components/cart.js";
-import Cart from '../components/Cart.js';
+import Cart from './Cart';
 import ProductList from '../components/ProductList.js';
 import Header from './Header';
 import Footer from './Footer';
 
 const Productpage = () => {
 
-
+    const [cartItems, setCartItems] = useState([]);
     // Save cart items to local storage
     React.useEffect(() => {
         const data = localStorage.getItem('cartItems');
@@ -57,10 +56,10 @@ const Productpage = () => {
                 
             </table>
           <Footer />
-        <div>
+        </div>
            
-    );
+    )
 
-}
+};
 
 export default Productpage;
