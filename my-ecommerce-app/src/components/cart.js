@@ -1,5 +1,5 @@
 import React from 'react';
-import CartItem from './CartItem';
+import CartItem from '../components/CartItem.js';
 
 function Cart({ cartItems, removeFromCart }) {
 

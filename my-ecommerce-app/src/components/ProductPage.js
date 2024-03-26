@@ -6,6 +6,8 @@ import productsData from '../data/product.js';
 function Productpage() {
    
     const [cartItems, setCartItems] = useState([]);
+
+
     // Save cart items to local storage
     React.useEffect(() => {
         const data = localStorage.getItem('cartItems');
@@ -19,7 +21,7 @@ function Productpage() {
     }, [cartItems]);
 
 
-
+    // Add to cart
     const addToCart = (product) => {
         const existingItemIndex = cartItems.findIndex(item => item.id === product.id);
         if (existingItemIndex !== -1) {
@@ -31,6 +33,7 @@ function Productpage() {
         }
     };
 
+    // Remove from cart
     const removeFromCart = (product) => {
         const updatedCartItems = cartItems.map(item =>
             item.id === product.id ? { ...item, quantity: item.quantity - 1 } : item
@@ -38,6 +41,8 @@ function Productpage() {
         setCartItems(updatedCartItems.filter(item => item.quantity > 0));
     };
 
+
+    
     return (
         <div className="product-page">
             <table>
